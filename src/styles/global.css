@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-cyber-black: #050505;
+  --color-cyber-gray: #121212;
+  --color-neon-green: #00ff41;
+
+  /* Typography */
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: "Inter", "system-ui", sans-serif;
+}
+
+/* Base styles to ensure the background is always dark */
+@layer base {
+  body {
+    @apply bg-cyber-black text-gray-300 antialiased;
+  }
+
+  /* Respect reduced-motion preference — disable decorative animations */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

@@ -52,7 +52,7 @@ projects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
       <div class="pt-8 grid grid-cols-3 gap-6 max-w-sm border-t border-white/5">
         {[
           { value: '2+', label: 'Years Coding' },
-          { value: '6+', label: 'Projects' },
+          { value: '5+', label: 'Projects' },
           { value: '10+', label: 'Technologies' },
         ].map(({ value, label }) => (
           <div>
@@ -84,6 +84,7 @@ projects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
           category={project.data.category}
           number={String(i + 1).padStart(2, '0')}
           repoUrl={project.data.repoUrl}
+          liveUrl={project.data.liveUrl}
           videoUrl={project.data.videoUrl}
           status={project.data.status}
         />
@@ -104,8 +105,8 @@ projects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
         { name: 'TypeScript',          label: 'Lang'    },
         { name: 'Django / DRF',        label: 'FW'      },
         { name: 'Next.js / React',     label: 'FW'      },
-        { name: 'LangChain / RAG',     label: 'AI'      },
-        { name: 'x86 Assembly',        label: 'Lang'    },
+        { name: 'Streamlit',           label: 'FW'      },
+        { name: 'Google Gemini',       label: 'AI'      },
         { name: 'SQL / Prisma',        label: 'DB'      },
         { name: 'SFML',                label: 'Graphics'},
         { name: 'Git / Vercel',        label: 'Tools'   },

@@ -1,19 +1,21 @@
 ---
-title: "RAG Document Q&A"
-description: "A Retrieval-Augmented Generation web app that lets users query documents in natural language — with document ingestion, chunking, embedding, semantic search over a vector database, and LLM-powered answers grounded in retrieved context."
-techStack: ["Python", "LangChain", "Vector DB", "LLM APIs", "RAG"]
+title: "CS Concept Cartographer"
+description: "An AI-powered study tool that turns any CS topic into an interactive knowledge graph — featuring concept mapping, side-by-side comparison, quiz mode with hidden labels, and SQLite-backed learning history with per-profile search and export."
+techStack: ["Python", "Streamlit", "Google Gemini", "vis.js", "SQLite"]
 category: "Python / AI"
 order: 1
-status: "In Development"
+repoUrl: "https://github.com/Rayan-Javed-Siddiqi/cs-concept-cartographer"
+liveUrl: "https://rayan-javed-cs-concept-cartographer.streamlit.app/"
 ---
 
 ## Overview
 
-Built a Retrieval-Augmented Generation pipeline that transforms uploaded documents into searchable knowledge. Users ask questions in plain language and receive answers grounded in retrieved document chunks.
+An AI-powered study tool that transforms any computer science topic into an interactive knowledge graph. Users input a topic and get structured concept breakdowns with typed nodes (prerequisite, related, advanced, application), rendered as a navigable vis.js graph. Built with Streamlit and Google Gemini, deployed live on Streamlit Cloud.
 
 ## Key Technical Details
 
-- **Ingestion pipeline**: Document upload, chunking, and embedding generation
-- **Vector search**: Semantic retrieval over a vector database for relevant context
-- **LLM integration**: Context-aware answer generation via LLM APIs
-- **Grounded responses**: Answers constrained to retrieved document chunks to reduce hallucination
+- **Concept mapping**: Generate interactive knowledge graphs with typed relationship nodes via Google Gemini
+- **Compare mode**: View two topics side by side to discover overlapping and unique concepts
+- **Quiz mode**: Hide node labels and test recall based on descriptions
+- **Learning history**: SQLite-backed cache per profile with search, rename, and export capabilities
+- **Annotations**: Add personal notes to any node for customised study sessions

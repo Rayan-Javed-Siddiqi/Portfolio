@@ -6,11 +6,12 @@ interface Props {
   category?: string;
   number: string;
   repoUrl?: string;
+  liveUrl?: string;
   videoUrl?: string;
   status?: string;
 }
 
-const { title, description, techStack, category, number, repoUrl, videoUrl, status } = Astro.props;
+const { title, description, techStack, category, number, repoUrl, liveUrl, videoUrl, status } = Astro.props;
 ---
 
 <article
@@ -103,7 +104,7 @@ const { title, description, techStack, category, number, repoUrl, videoUrl, stat
     </div>
 
     <!-- Action links (repo + video) -->
-    {(repoUrl || videoUrl) && (
+    {(repoUrl || liveUrl || videoUrl) && (
       <div class="flex items-center gap-4 pt-4 border-t border-white/5">
         {repoUrl && (
           <a
@@ -126,6 +127,21 @@ const { title, description, techStack, category, number, repoUrl, videoUrl, stat
                        c0-6.627-5.373-12-12-12z"/>
             </svg>
             Source Code
+          </a>
+        )}
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${title} live demo (opens in new tab)`}
+            class="flex items-center gap-1.5 font-mono text-xs text-gray-500
+                   hover:text-neon-green transition-colors duration-200"
+          >
+            <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            Live Demo
           </a>
         )}
         {videoUrl && (

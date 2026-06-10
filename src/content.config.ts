@@ -10,6 +10,7 @@ const projects = defineCollection({
     category: z.string().optional(),
     order: z.number().optional(),
     repoUrl: z.string().url().optional(),
+    liveUrl: z.string().url().optional(),
     videoUrl: z.string().url().optional(),
     status: z.string().optional(),
   }),
